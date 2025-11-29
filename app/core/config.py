@@ -12,8 +12,11 @@ class Settings(BaseSettings):
     DB_USER: str 
     DB_PASSWORD: str 
     
+
     model_config = {
-        "env_file": ".env"
+        "extra": "ignore",
+        "env_file": ".env",
+        "case_sensitive": True
     }
 
 settings = Settings()
