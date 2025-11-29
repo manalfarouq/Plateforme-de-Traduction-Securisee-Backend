@@ -9,6 +9,9 @@
 
 API Backend FastAPI pour une plateforme de traduction sécurisée développée pour TalAIt. Cette API permet la traduction bidirectionnelle français-anglais via l'API Hugging Face, avec authentification JWT et gestion des utilisateurs.
 
+**Frontend associé :** [Plateforme de Traduction Sécurisée - Frontend](https://github.com/manalfarouq/Plateforme-de-Traduction-Securisee-Frontend.git)
+
+
 ## Fonctionnalités
 
 - ✅ **Authentification JWT** - Système complet d'inscription/connexion
@@ -584,4 +587,11 @@ python -c "import secrets; print(secrets.token_hex(32))"
 - [Helsinki-NLP](https://huggingface.co/Helsinki-NLP) - Modèles OPUS-MT
 - [PostgreSQL](https://www.postgresql.org/) - Base de données robuste
 - [Render](https://render.com/) - Plateforme de déploiement
+
+
+## Liens utiles
+
+- **Frontend du projet** : [Plateforme de Traduction Sécurisée - Frontend](https://github.com/manalfarouq/Plateforme-de-Traduction-Securisee-Frontend.git)
+- **API Documentation** : [https://zorohack.onrender.com/docs](https://zorohack.onrender.com/docs)
+- **Repository Backend** : [GitHub](https://github.com/manalfarouq/Plateforme-de-Traduction-Securisee-Backend.git)
 
