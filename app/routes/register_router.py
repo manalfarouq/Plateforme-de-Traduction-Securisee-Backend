@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from app.schemas.User_schema import user_schema
 from app.database.db_connection import get_db_connection  
 import bcrypt
-import jwt
+from jose import jwt
 from datetime import datetime, timedelta, timezone
 from app.core.config import settings
 

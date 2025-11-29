@@ -2,7 +2,7 @@ from app.schemas.LoginRequest_schema import LoginRequest
 from fastapi import APIRouter, HTTPException
 from app.database.db_connection import get_db_connection
 import bcrypt
-from jose import jwt 
+from jose import jwt
 from app.core.config import settings
 
 
