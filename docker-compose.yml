@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # Service PostgreSQL
+  # ========== BASE DE DONNÉES ==========
   db:
     image: postgres:15
     container_name: traduction_db
@@ -18,11 +18,12 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
-  # Service FastAPI
-  app:
-    build: .
-    container_name: traduction_app
+  # ========== BACKEND (FastAPI) ==========
+  backend:
+    build: .  
+    container_name: traduction_backend
     ports:
       - "8000:8000"
     environment:
@@ -39,8 +40,10 @@ services:
       db:
         condition: service_healthy
     volumes:
-      - .:/app
+      - .:/app 
+      - /app/__pycache__
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
 
 volumes:
   postgres_data:
